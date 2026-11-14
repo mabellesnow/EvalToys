@@ -1,0 +1,19 @@
+{
+ "frozen_at": "2026-11-13",
+ "files": {
+  "outcome_bias/exp_e1.py": "a4bc00c1e3f93e3026d71eba8219d32211ddd10068b73ba9e1ecc4cd67e81f00",
+  "outcome_bias/exp_e3.py": "3bc92504e2d2c9bfd04cddfc5166176a0dc87155ddb5bed6f517134b144ecad8",
+  "outcome_bias/exp_e4.py": "6966e035d22c98501b8ff3c218f1c3f48cf20cc75e0ac6c931646c803d0880a1",
+  "outcome_bias/exp_e5.py": "62abb7d9e43c56717a75cbddd9b1c1a127dfa543fed456c39e23f8abcad7e8db",
+  "outcome_bias/scenarios_v2.py": "abe7ebb02bb7b1be6fed522c526e23924f41fe823622bff65b7ad6eca5f462cc",
+  "outcome_bias/scenarios.py": "f2cdbf51f35e4e226e8541615d09c9537e5eabf28a871de9dc57d1fd96d5b4a2",
+  "outcome_bias/experiments.py": "614d78f9f17a991efb5116ba365ddd1acf990134912c64f6d0fe3f4ca5da2f3a"
+ },
+ "items": {
+  "e1": 180,
+  "e2": 858,
+  "e3": 840,
+  "e4": 180,
+  "e5": 180
+ }
+}

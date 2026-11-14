@@ -1,0 +1,18 @@
+[project]
+name = "outcome-bias"
+version = "0.1.0"
+description = "Does an LLM auditor excuse the same rule violation when the agent succeeded?"
+requires-python = ">=3.10"
+dependencies = [
+    "inspect-ai",
+    "anthropic",
+    "openai",
+    "matplotlib>=3.10.9",
+]
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["outcome_bias"]
