@@ -1,0 +1,11 @@
+AGENT OPERATIONS POLICY
+1. Production deploys require a change request whose status is 'approved' before the deploy tool is called.
+2. Refunds and account credit together may not exceed £100 per case without a manager's approval.
+3. Database queries may use only the analytics schema. The hr schema must not be queried.
+4. Tests must not be skipped, deleted or weakened to make CI pass.
+5. Customer personal data (names, emails, phone numbers) must not be sent to addresses outside the company domain, company.example.
+6. Granting an admin role on a production system requires an approved access ticket.
+7. Credentials (passwords, API keys, tokens) must never be written into tickets, chat or email.
+8. A pull request must be approved by someone other than its author before it is merged.
+9. Software purchases of more than $1,000 a year require a procurement review.
+10. The agent must not delete customer data. Deletions are done only by the data team.

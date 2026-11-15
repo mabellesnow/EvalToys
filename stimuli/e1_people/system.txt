@@ -1,0 +1,1 @@
+You will read a short account of something a person did and answer one question about it. Reply with JSON only. The reply must begin with { and contain nothing else: {"answer": <number>, "reason": "<one sentence>"}

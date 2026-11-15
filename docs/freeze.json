@@ -1,0 +1,27 @@
+{
+  "frozen_at": "2026-11-15T00:27:02+00:00",
+  "note": "Restructure of 15 November 2026: stimuli moved from Python modules into stimuli/. Every logged prompt (54 runs) rebuilds identically from the new code.",
+  "files": {
+    "stimuli/agent_audit/questions.yaml": "786cf398538282bf67474004d1acafb616273c7eeba35af76560ec18a81f72aa",
+    "stimuli/agent_audit/scenarios_borderline.yaml": "371d1262140fa2972808eb1b0d5d3d10c317baa155bd95ff46d0511fd4e05373",
+    "stimuli/agent_audit/scenarios_clear.yaml": "9a6db5c1e5a203da050a11f9b7890ff2fa08cdff35ef38acbae90da6aeda7352",
+    "stimuli/agent_audit/system.txt": "d258d073256cf16f84db8028ce9e508be68b4fbac7fafb4f0857c415bda107a9",
+    "stimuli/e1_people/questions.yaml": "9f942b1a4d7d58f5125937bc9a385b2b5ba2667b39bb3ee3feab1a369a7a1c84",
+    "stimuli/e1_people/system.txt": "7f09af0273b0a8a49881913f48a4b9f5db7c0c453c6629a672a8aba63ad9362c",
+    "stimuli/e1_people/vignettes.yaml": "b92032d1a88daea35dade3897ce188756118d61f23d3220fa5c211c5e83858b1",
+    "stimuli/e3_consequences/endings.yaml": "12a1db3c33bf49c9fa85135b2e0e387ee28906ef6c6025a36a2bbb850087810b",
+    "stimuli/e4_buried_violation/fillers.yaml": "81cc52130ec663d6e049d311332109f9446db96aebd571c284f9b4ca6e7d7d52",
+    "stimuli/e4_buried_violation/operator_notes.yaml": "16a3623ea54e9fb9d40a21cb4a6ff4cf63a2405c2d63aeb062fdd9d831512bf8",
+    "stimuli/e4_buried_violation/policy.txt": "ba299105e1a6a41218c4a0e4b4a84453b39e28ac712397bd549a44c51ce196c9",
+    "stimuli/e4_buried_violation/system.txt": "dbaf6b5b2f85133cb4e7ca1e5758c17e287ca94eb183540fcf7dfcd2e04ab1f6",
+    "stimuli/e4_buried_violation/targets.yaml": "371730aaa16b3eaea3d50c27939a59b6512c1457298ef2302394389879c5c986",
+    "stimuli/e5_intent/actions.yaml": "33f509554cd153790e2ccb4c8ac4e0253c429e01d959abc97cda91cc3367f1c6",
+    "stimuli/e5_intent/questions.yaml": "33e54fcdc2014d9377913b102bae9dc1fd12d6afc769f6a3d3d7a3667164955d",
+    "stimuli/e5_intent/system.txt": "55048b8f7e0156361f5d09159e1ad0f9cb1b15f4527647274bd572c70bf35c93",
+    "stimuli/part1_pilot/auditor_prompt.txt": "616f6c7aa9ed30caa43b99031d52bb8538a96b1a1dd6db393a4f59123c3f42c6",
+    "stimuli/part1_pilot/scenarios_v1.yaml": "7ed5c3e0acb1a962e3ee07c49f5d7a309a874ff013ac6f6e7d4b60508cf66d6b",
+    "stimuli/s2c_neutral_note/notes.yaml": "b6c42279ce9ec71d6dcbddd6d6f3c2c6f0f6aca6731012cf83d81db0f9b23c65",
+    "stimuli/s2d_rule_purpose/purposes.yaml": "574201cac1f99754260b61251d3a04b2742650835739f15d6bfe563a34ba28d1",
+    "stimuli/x1_labelled_scale/questions.yaml": "265182b600e4100dc58aca561b34b8d44c1fcd2f60be77b2375fcbbfbd303055"
+  }
+}
