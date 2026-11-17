@@ -314,4 +314,4 @@ That's the honest state of things. You can make a judge mostly stop reading the 
 
 ## Code
 
-Code, stimuli, plans and analysis: [repo link]
+Code, stimuli, plans and analysis: [github.com/mabellesnow/llm_auditor](https://github.com/mabellesnow/llm_auditor)
