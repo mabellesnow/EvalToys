@@ -9,6 +9,8 @@ dependencies = [
     "openai",
     "matplotlib>=3.10.9",
     "pyyaml",
+    "statsmodels>=0.15.0",
+    "pandas>=2.3.3",
 ]
 
 [build-system]
@@ -17,3 +19,7 @@ build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]
 include = ["outcome_bias*"]
+
+[tool.setuptools.package-data]
+"outcome_bias.stimuli" = ["**/*.yaml", "**/*.txt", "hashes.json", "README.md"]
+"outcome_bias.analysis" = ["scenario_codes.yaml"]

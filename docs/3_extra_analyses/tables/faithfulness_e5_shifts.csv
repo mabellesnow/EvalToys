@@ -1,0 +1,57 @@
+question,model,cond,reasons,scenarios,answers,shift,lo,hi
+intent,haiku,harm,not mentioned,12,126,-2.57,-7.04,1.89
+intent,haiku,harm,not mentioned (strict),12,104,-2.96,-6.77,1.15
+intent,haiku,harm,mentioned,7,18,1.24,-4.29,8.95
+intent,haiku,harm,used as grounds,4,6,7.25,-7.50,29.25
+intent,haiku,harm,all,12,144,-1.53,-6.23,3.35
+intent,sonnet,harm,not mentioned,12,133,-9.37,-16.83,-4.47
+intent,sonnet,harm,not mentioned (strict),12,111,-9.42,-16.86,-4.56
+intent,sonnet,harm,mentioned,6,10,-13.94,-25.94,-4.69
+intent,sonnet,harm,all,12,143,-9.33,-16.76,-4.44
+intent,opus,harm,not mentioned,11,124,-2.99,-8.27,1.66
+intent,opus,harm,not mentioned (strict),11,107,-3.41,-8.70,1.40
+intent,opus,harm,mentioned,6,13,-4.75,-13.64,2.36
+intent,opus,harm,all,11,137,-3.07,-8.27,1.49
+suspicion,haiku,harm,not mentioned,12,86,-9.38,-17.68,-2.34
+suspicion,haiku,harm,not mentioned (strict),11,55,-11.67,-21.75,-2.50
+suspicion,haiku,harm,mentioned,11,58,-2.07,-10.22,4.13
+suspicion,haiku,harm,used as grounds,10,33,0.72,-8.88,7.28
+suspicion,haiku,harm,all,12,144,-6.04,-13.25,0.24
+suspicion,sonnet,harm,not mentioned,12,129,-16.60,-23.41,-11.13
+suspicion,sonnet,harm,not mentioned (strict),12,104,-17.33,-24.16,-11.60
+suspicion,sonnet,harm,mentioned,7,14,-11.52,-26.17,-2.07
+suspicion,sonnet,harm,all,12,143,-16.27,-23.13,-10.74
+suspicion,opus,harm,not mentioned,11,93,-6.84,-12.35,-1.35
+suspicion,opus,harm,not mentioned (strict),11,72,-7.87,-14.06,-1.95
+suspicion,opus,harm,mentioned,11,39,-7.49,-14.94,-0.86
+suspicion,opus,harm,used as grounds,7,19,-10.17,-23.04,1.65
+suspicion,opus,harm,all,11,132,-6.24,-11.79,-1.04
+intent,haiku,noharm,not mentioned,10,62,-7.59,-13.01,-2.82
+intent,haiku,noharm,not mentioned (strict),10,40,-7.36,-12.62,-2.61
+intent,haiku,noharm,mentioned,11,82,-10.03,-14.92,-5.50
+intent,haiku,noharm,used as grounds,8,19,-6.25,-13.25,0.00
+intent,haiku,noharm,all,12,144,-8.62,-13.35,-4.39
+intent,sonnet,noharm,not mentioned,12,100,-10.05,-19.85,-4.28
+intent,sonnet,noharm,not mentioned (strict),12,80,-9.76,-19.61,-4.07
+intent,sonnet,noharm,mentioned,10,44,-12.10,-24.08,-4.42
+intent,sonnet,noharm,used as grounds,4,7,-19.88,-48.25,-2.12
+intent,sonnet,noharm,all,12,144,-10.15,-20.19,-4.19
+intent,opus,noharm,not mentioned,11,103,-7.03,-12.17,-2.35
+intent,opus,noharm,not mentioned (strict),11,72,-7.22,-11.72,-3.17
+intent,opus,noharm,mentioned,10,34,-8.28,-14.40,-1.92
+intent,opus,noharm,dismissed,4,6,-7.08,-19.08,6.08
+intent,opus,noharm,all,11,137,-7.59,-12.50,-2.96
+suspicion,haiku,noharm,not mentioned,8,51,-10.54,-16.97,-4.30
+suspicion,haiku,noharm,not mentioned (strict),7,35,-8.32,-14.62,-2.19
+suspicion,haiku,noharm,mentioned,12,93,-18.99,-25.36,-12.11
+suspicion,haiku,noharm,used as grounds,9,31,-17.94,-27.26,-8.92
+suspicion,haiku,noharm,all,12,144,-18.07,-24.48,-11.46
+suspicion,sonnet,noharm,not mentioned,12,90,-21.31,-28.65,-15.19
+suspicion,sonnet,noharm,not mentioned (strict),12,65,-20.03,-27.69,-13.80
+suspicion,sonnet,noharm,mentioned,11,54,-19.98,-27.77,-14.03
+suspicion,sonnet,noharm,all,12,144,-20.19,-26.93,-14.89
+suspicion,opus,noharm,not mentioned,11,90,-8.41,-14.26,-3.03
+suspicion,opus,noharm,not mentioned (strict),10,58,-10.14,-17.43,-3.46
+suspicion,opus,noharm,mentioned,10,42,-8.04,-13.64,-2.94
+suspicion,opus,noharm,dismissed,5,9,-8.85,-17.53,-0.16
+suspicion,opus,noharm,all,11,132,-8.82,-14.46,-3.67

@@ -4,7 +4,7 @@
 version, with E2's task-level endings: success, failure, or none ("omitted"). Seven questions for the
 rule-bending version; four for the compliant one.
 
-Stimuli: stimuli/agent_audit/     Plan: docs/e1_e5/plan.md      Results: docs/e1_e5/results.md
+Stimuli: outcome_bias/stimuli/agent_transcripts/     Plan: docs/1_main_experiments/plan.md      Results: docs/1_main_experiments/results.md
 """
 
 from outcome_bias import stimuli
@@ -23,8 +23,23 @@ def build():
             for cond in CONDITIONS:
                 ending = None if cond == "omitted" else s.endings[cond]
                 for q in questions.values():
-                    if follows_rule and q.name not in stimuli.agent_questions_for_compliant():
+                    if (
+                        follows_rule
+                        and q.name not in stimuli.agent_questions_for_compliant()
+                    ):
                         continue
-                    items.append(item(EXP, s.id, version, cond, 0, q.name, stimuli.agent_system(),
-                                      ask(agent_transcript(s, follows_rule, ending), q.text), q.lo, q.hi))
+                    items.append(
+                        item(
+                            EXP,
+                            s.id,
+                            version,
+                            cond,
+                            0,
+                            q.name,
+                            stimuli.agent_system(),
+                            ask(agent_transcript(s, follows_rule, ending), q.text),
+                            q.lo,
+                            q.hi,
+                        )
+                    )
     return items

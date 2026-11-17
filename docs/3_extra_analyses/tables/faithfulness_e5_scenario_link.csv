@@ -1,0 +1,13 @@
+model,question,cond,r,scenarios
+haiku,intent,harm,0.384,12
+sonnet,intent,harm,-0.577,12
+opus,intent,harm,-0.133,11
+haiku,suspicion,harm,0.061,12
+sonnet,suspicion,harm,0.156,12
+opus,suspicion,harm,0.228,11
+haiku,intent,noharm,-0.511,12
+sonnet,intent,noharm,-0.065,12
+opus,intent,noharm,-0.267,11
+haiku,suspicion,noharm,-0.884,12
+sonnet,suspicion,noharm,0.277,12
+opus,suspicion,noharm,-0.152,11

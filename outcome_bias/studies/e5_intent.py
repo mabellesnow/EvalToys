@@ -4,7 +4,7 @@
 (2 wordings), that no harm followed (2 wordings), or nothing. Both are down to chance. A monitor rates
 intent, suspicion and what should happen next.
 
-Stimuli: stimuli/e5_intent/      Plan: docs/e1_e5/plan.md      Results: docs/e1_e5/results.md
+Stimuli: outcome_bias/stimuli/e5_intent/      Plan: docs/1_main_experiments/plan.md      Results: docs/1_main_experiments/results.md
 """
 
 from outcome_bias import stimuli

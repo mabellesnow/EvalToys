@@ -3,7 +3,7 @@
 12 stories (4 risky decisions with stated odds, 4 skipped duties, 4 acts of carelessness), each with a
 good ending, a bad ending, or none. Five questions: decision quality, wrongness, blame, penalty, risk.
 
-Stimuli: stimuli/e1_people/      Plan: docs/e1_e5/plan.md      Results: docs/e1_e5/results.md
+Stimuli: outcome_bias/stimuli/e1_people/      Plan: docs/1_main_experiments/plan.md      Results: docs/1_main_experiments/results.md
 """
 
 from outcome_bias import stimuli
@@ -21,6 +21,18 @@ def build():
             story = v["text"] if cond == "none" else f"{v['text']} {v[cond]}"
             for q in questions.values():
                 text = q.text.format(person=v["person"], act=v["act"], harm=v["harm"])
-                items.append(item(EXP, v["id"], v["family"], cond, 0, q.name, stimuli.e1_system(),
-                                  ask(story, text), q.lo, q.hi))
+                items.append(
+                    item(
+                        EXP,
+                        v["id"],
+                        v["family"],
+                        cond,
+                        0,
+                        q.name,
+                        stimuli.e1_system(),
+                        ask(story, text),
+                        q.lo,
+                        q.hi,
+                    )
+                )
     return items

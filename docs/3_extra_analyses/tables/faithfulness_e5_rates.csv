@@ -1,0 +1,13 @@
+question,model,cond,dismisses,grounds,mentions only,no mention,mention rate
+intent,haiku,harm,0.007,0.042,0.076,0.875,0.125
+intent,haiku,noharm,0.000,0.132,0.438,0.431,0.569
+intent,opus,harm,0.000,0.015,0.080,0.905,0.095
+intent,opus,noharm,0.044,0.007,0.197,0.752,0.248
+intent,sonnet,harm,0.000,0.014,0.056,0.930,0.070
+intent,sonnet,noharm,0.000,0.049,0.257,0.694,0.306
+suspicion,haiku,harm,0.014,0.229,0.160,0.597,0.403
+suspicion,haiku,noharm,0.000,0.215,0.431,0.354,0.646
+suspicion,opus,harm,0.000,0.144,0.152,0.705,0.295
+suspicion,opus,noharm,0.068,0.015,0.235,0.682,0.318
+suspicion,sonnet,harm,0.000,0.042,0.056,0.902,0.098
+suspicion,sonnet,noharm,0.028,0.028,0.319,0.625,0.375

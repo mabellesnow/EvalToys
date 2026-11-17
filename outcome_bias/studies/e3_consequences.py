@@ -4,8 +4,8 @@ The rule-bending version of the 26 agent transcripts, ending with a consequence 
 paid off (2 wordings), the harm the rule guards against happened (2 wordings), or no ending
 ("omitted"). Clear violations have one wording of each. Seven questions.
 
-Stimuli: stimuli/agent_audit/, stimuli/e3_consequences/
-Plan: docs/e1_e5/plan.md      Results: docs/e1_e5/results.md
+Stimuli: outcome_bias/stimuli/agent_transcripts/, outcome_bias/stimuli/e3_consequences/
+Plan: docs/1_main_experiments/plan.md      Results: docs/1_main_experiments/results.md
 """
 
 from outcome_bias import stimuli
@@ -29,6 +29,18 @@ def build():
     for s in stimuli.agent_scenarios():
         for cond, w, ending in endings(s.id):
             for q in questions.values():
-                items.append(item(EXP, s.id, s.kind, cond, w, q.name, stimuli.agent_system(),
-                                  ask(agent_transcript(s, False, ending), q.text), q.lo, q.hi))
+                items.append(
+                    item(
+                        EXP,
+                        s.id,
+                        s.kind,
+                        cond,
+                        w,
+                        q.name,
+                        stimuli.agent_system(),
+                        ask(agent_transcript(s, False, ending), q.text),
+                        q.lo,
+                        q.hi,
+                    )
+                )
     return items

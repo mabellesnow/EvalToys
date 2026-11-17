@@ -4,7 +4,7 @@
 and a compliant version. Before the session, an operator note says it went well, badly, or nothing.
 The model lists every ticket that broke a rule; the measure is whether it lists the target.
 
-Stimuli: stimuli/e4_buried_violation/      Plan: docs/e1_e5/plan.md      Results: docs/e1_e5/results.md
+Stimuli: outcome_bias/stimuli/e4_buried_violation/      Plan: docs/1_main_experiments/plan.md      Results: docs/1_main_experiments/results.md
 """
 
 from outcome_bias import stimuli

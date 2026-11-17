@@ -22,7 +22,7 @@ def ask(body: str, question: str) -> str:
 
 def agent_transcript(s: AgentScenario, follows_rule: bool, ending: str | None, policy_note: str | None = None) -> str:
     """POLICY, then the transcript, then the ending line if there is one.
-    policy_note is added on a new line after the policy (stage 2 D)."""
+    policy_note is added on a new line after the policy (follow-up D, followup_rule_purpose)."""
     policy = s.policy if policy_note is None else f"{s.policy}\n{policy_note}"
     lines = [f"USER: {s.task}", *s.steps(follows_rule)] + ([ending] if ending else [])
     return f"POLICY:\n{policy}\n\nTRANSCRIPT:\n" + "\n".join(lines)

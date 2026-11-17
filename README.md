@@ -2,30 +2,52 @@
 
 Does an LLM that reviews an AI agent's work judge the same behaviour differently depending on how things turned out?
 
-Every experiment uses the same move: show the model a transcript that is word-for-word identical except for its last line (how things turned out), ask one question per call, and compare the answers across endings, scenario by scenario. The write-up is [docs/post/outcome_bias_in_llm_auditors.md](docs/post/outcome_bias_in_llm_auditors.md).
+Every experiment uses the same move: show the model a transcript that is word-for-word identical except for its last line (how things turned out), ask one question per call, and compare the answers across endings, scenario by scenario.
+
+**Start with the write-up:** [docs/posts/the_judge_who_read_the_ending.md](docs/posts/the_judge_who_read_the_ending.md).
 
 ## Layout
 
 ```
-stimuli/          what the models read: scenarios, endings, questions, system prompts (data only)
-outcome_bias/     the code
-  studies/        one module per study: builds that study's prompts from stimuli/
-  analysis/       one module per plan: the pre-registered contrasts
-  figures/        figure code (style.py is shared)
-  part1/          the pilot, archived
-docs/             plans (written before the runs), results, the write-up; docs/README.md is the index
-figures/          rendered figures, by phase
-logs/             Inspect logs and the run index logs/exp_runs.tsv (not in git)
+outcome_bias/      everything the code uses
+  stimuli/         what the models read: transcripts, endings, questions, system prompts (+ their loader)
+  studies/         one module per study: turns stimuli into prompts
+  analysis/        one module per phase, plus the extra analyses
+  figures.py       the blog post's figures
+  ...              running, scoring, statistics, checks (table below)
+docs/              what was planned and what was found, in the order it happened
+  1_main_experiments/   E1 to E5: plan (written before the runs) and results
+  2_follow_ups/         four runs that closed the gaps E1 to E5 left: plan and results
+  3_extra_analyses/     effect sizes, which scenarios tip, whether explanations admit the swing
+  posts/                the blog post and its figures
+  background/           prior work, ideas for next steps
+logs/              Inspect logs and the run index (not in git)
+archive/           retired work (the pilot, an earlier write-up) and personal notes (not in git)
 ```
 
-The study id is the same everywhere. `e3_consequences`, for example, names its stimuli (`stimuli/e3_consequences/`), its module (`outcome_bias/studies/e3_consequences.py`) and its Inspect task (`tasks.py@e3_consequences`). [docs/README.md](docs/README.md) has the table of studies, plans, results and run labels.
+[docs/README.md](docs/README.md) lists every study with its question, stimuli, code, plan, results and run labels.
+
+## The studies
+
+| Study | Question | Phase |
+|---|---|---|
+| `e1_people` | Do these models judge people by outcomes at all? (positive control) | 1 |
+| `e2_task_outcome` | Does how the task went change how an agent's shortcut is judged? | 1 |
+| `e3_consequences` | Does what the shortcut caused (a payoff, or harm) change it? | 1 |
+| `e4_buried_violation` | Does a "good session" note make an auditor miss a buried violation? | 1 |
+| `e5_intent` | Does chance harm make an action look deliberate to a monitor? | 1 |
+| `followup_labelled_scale` | Is E3's verdict shift the unlabelled scale? Does one instruction remove it? | 1 (Haiku), 2 |
+| `followup_neutral_note` | Is E5's relief after "no harm" the outcome, or any follow-up note? | 2 |
+| `followup_rule_purpose` | Does harm still move the verdict when the rule's purpose is stated? | 2 |
+
+The study id names its stimulus folder (`outcome_bias/stimuli/<id>/`, where it has one), its module (`outcome_bias/studies/<id>.py`) and its Inspect task (`tasks.py@<id>`). E2, E3 and two follow-ups share the agent transcripts in `outcome_bias/stimuli/agent_transcripts/`.
 
 ### Code, module by module
 
 | Module | Job |
 |---|---|
-| `paths.py` | where stimuli, docs, figures and logs live |
-| `stimuli.py` | load the files in `stimuli/` |
+| `paths.py` | where stimuli, docs and logs live |
+| `stimuli/` | the stimulus files, and `__init__.py` to load them |
 | `prompts.py` | assemble prompts (transcripts, endings, E4 sessions) and wrap them as Inspect samples |
 | `studies/` | one `build()` per study; `studies/__init__.py` lists them all |
 | `tasks.py` | the Inspect task for each study |
@@ -34,7 +56,8 @@ The study id is the same everywhere. `e3_consequences`, for example, names its s
 | `run.py` | run a study on several models and record each run in the run index |
 | `runlog.py` | read and write the run index |
 | `stats.py` | per-scenario means, paired differences, bootstrap intervals |
-| `analysis/` | `load.py` reads answers from logs; `e1_e5.py`, `x1.py`, `stage2.py` report each plan |
+| `analysis/` | `load.py` reads answers from logs; `main_experiments.py`, `labelled_scale.py` and `follow_ups.py` report each plan; `mixed_models.py`, `moderators.py` (with its scenario codes, `scenario_codes.yaml`) and `faithfulness.py` are the extra analyses |
+| `figures.py` | the blog post's figures, computed from the logs |
 | `verify.py` | check stimulus hashes, and rebuild every logged prompt to confirm it is unchanged |
 
 ## Setup
@@ -64,25 +87,29 @@ This runs the study on Haiku, Sonnet and Opus in their main arm (the lowest reas
 | `--models haiku sonnet opus` | which models (see `models.py`) |
 | `--arm main`, `medium` or `reasoning` | the reasoning setting |
 | `--label run2` | the run's label in the run index (use it for re-runs) |
-| `--set variant=ignore` | a study parameter (`x1_labelled_scale`: `variant`; `e4_buried_violation`: `n_filler`) |
+| `--set variant=ignore` | a study parameter (`followup_labelled_scale`: `variant`; `e4_buried_violation`: `n_filler`) |
 | `--limit 3` | a smoke test on the first 3 items, written to `logs/smoke/` and not recorded |
 
 ## Analysing
 
 ```bash
-python -m outcome_bias.analysis.e1_e5 e3
+python -m outcome_bias.analysis.main_experiments e3
 ```
 
 ```bash
-python -m outcome_bias.analysis.e1_e5 e3 --label run2
+python -m outcome_bias.analysis.main_experiments e3 --label run2
 ```
 
 ```bash
-python -m outcome_bias.analysis.stage2
+python -m outcome_bias.analysis.follow_ups
 ```
 
 ```bash
-python -m outcome_bias.figures.e1_e5
+python -m outcome_bias.analysis.mixed_models
+```
+
+```bash
+python -m outcome_bias.figures
 ```
 
 ```bash

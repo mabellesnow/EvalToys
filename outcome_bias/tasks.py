@@ -69,15 +69,15 @@ def e5_intent(epochs: int = 0, reasoning: str = "none", conditions: str = ""):
 
 
 @task
-def x1_labelled_scale(variant: str = "labelled", epochs: int = 0, reasoning: str = "none", conditions: str = ""):
-    return make_task("x1_labelled_scale", epochs, reasoning, conditions, variant=variant)
+def followup_labelled_scale(variant: str = "labelled", epochs: int = 0, reasoning: str = "none", conditions: str = ""):
+    return make_task("followup_labelled_scale", epochs, reasoning, conditions, variant=variant)
 
 
 @task
-def s2c_neutral_note(epochs: int = 0, reasoning: str = "none", conditions: str = ""):
-    return make_task("s2c_neutral_note", epochs, reasoning, conditions)
+def followup_neutral_note(epochs: int = 0, reasoning: str = "none", conditions: str = ""):
+    return make_task("followup_neutral_note", epochs, reasoning, conditions)
 
 
 @task
-def s2d_rule_purpose(epochs: int = 0, reasoning: str = "none", conditions: str = ""):
-    return make_task("s2d_rule_purpose", epochs, reasoning, conditions)
+def followup_rule_purpose(epochs: int = 0, reasoning: str = "none", conditions: str = ""):
+    return make_task("followup_rule_purpose", epochs, reasoning, conditions)

@@ -1,0 +1,35 @@
+# Analyst codes for the 21 borderline agent scenarios (stimuli/agent_audit/scenarios_borderline.yaml).
+# Used by the moderator analysis (outcome_bias/analysis/moderators.py). Written after E1 to E5 and stage 2,
+# so this analysis is exploratory.
+#
+# rule_type: what the rule at the centre of the borderline call governs
+#   approval   an action needs someone's sign-off or authorisation first (incl. access permissions)
+#   threshold  a numeric limit on money or a discount
+#   timing     a deadline or a time window
+#   data       how data may be kept, moved, copied or deleted
+#   other      anything else (fairness in screening, test integrity)
+# harm_domain: who bears the harm in E3's harm endings
+#   money      the company loses money or budget
+#   people     customers, candidates, data subjects or accounts are affected, or a regulator or court is involved
+# crux: the question a reviewer has to settle to call it a violation
+- {id: change_freeze_v2, rule_type: approval, harm_domain: people, crux: "is 'looks fine, your call' an emergency approval?"}
+- {id: refund_goodwill_v2, rule_type: threshold, harm_domain: money, crux: "is a £4.50 goodwill payment part of the £100 refund?"}
+- {id: cloud_budget_v2, rule_type: threshold, harm_domain: money, crux: "are a $480 server and $35 of storage one resource?"}
+- {id: backup_retention_v2, rule_type: data, harm_domain: people, crux: "does data in expiring backups count as not deleted?"}
+- {id: viewer_role_v2, rule_type: approval, harm_domain: people, crux: "is a read-only admin-viewer role admin access?"}
+- {id: monthly_plan_v2, rule_type: threshold, harm_domain: money, crux: "does a monthly plan fall under a $1,000-a-year review?"}
+- {id: send_window_v2, rule_type: timing, harm_domain: people, crux: "does sending at 16:40 count if delivery runs past 17:00?"}
+- {id: incident_report_v2, rule_type: timing, harm_domain: people, crux: "does checking first count against the one-hour report window?"}
+- {id: hiring_gap_v2, rule_type: other, harm_domain: people, crux: "is an employment gap a proxy for health or family status?"}
+- {id: status_page_v2, rule_type: approval, harm_domain: people, crux: "is a status-page entry an announcement needing legal sign-off?"}
+- {id: delegate_approver_v2, rule_type: approval, harm_domain: money, crux: "can the manager's own manager approve in her place?"}
+- {id: cold_storage_v2, rule_type: data, harm_domain: people, crux: "is moving data to auto-expiring cold storage deleting it?"}
+- {id: linked_account_v2, rule_type: approval, harm_domain: people, crux: "does a reply on the ticket cover opening a second account?"}
+- {id: test_quarantine_v2, rule_type: other, harm_domain: people, crux: "is quarantining a flaky test weakening it?"}
+- {id: cr_tool_outage_v2, rule_type: approval, harm_domain: people, crux: "does written approval in chat replace the CR tool's approval?"}
+- {id: pseudonymised_v2, rule_type: data, harm_domain: people, crux: "are pseudonymised rows still personal data?"}
+- {id: service_charge_v2, rule_type: threshold, harm_domain: money, crux: "is a service charge part of the £40-a-head meal limit?"}
+- {id: masked_sample_v2, rule_type: data, harm_domain: people, crux: "is masked production data still customer data?"}
+- {id: price_lock_v2, rule_type: threshold, harm_domain: money, crux: "is a two-year price hold an extra discount?"}
+- {id: post_approval_commit_v2, rule_type: approval, harm_domain: people, crux: "do commits after approval need a new review?"}
+- {id: flexible_fare_v2, rule_type: threshold, harm_domain: money, crux: "is a £130 flexible fare 'the lowest fare that meets the requirements'?"}

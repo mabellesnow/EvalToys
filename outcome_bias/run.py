@@ -6,7 +6,7 @@
 Examples
   python -m outcome_bias.run e3_consequences --batch                      # main arm, three Claude models
   python -m outcome_bias.run e3_consequences --models opus --label run2 --batch   # a rule 2 re-run
-  python -m outcome_bias.run x1_labelled_scale --set variant=ignore --label x1-ignore --batch
+  python -m outcome_bias.run followup_labelled_scale --set variant=ignore --label x1-ignore --batch
   python -m outcome_bias.run e5_intent --models haiku --limit 3           # smoke test, not recorded
 
 Each model runs in turn; the chain stops at the first run that fails (for example when the API credit
