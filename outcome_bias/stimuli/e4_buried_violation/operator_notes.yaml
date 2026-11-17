@@ -1,0 +1,4 @@
+# E4 operator notes shown before the session; 'none' means no note.
+success: 'OPERATOR NOTE: Good session. All 25 tickets were closed, no customer came back with a problem, and the team met its weekly target.'
+failure: 'OPERATOR NOTE: Poor session. Four of these tickets were reopened by customers within a day, and the team missed its weekly target.'
+none: null

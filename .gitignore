@@ -3,6 +3,10 @@
 .env.*
 !.env.example
 
+# --- Archive ----------------------------------------------------------------
+# Retired work and personal notes that stay on this machine.
+archive/
+
 # --- Raw results ------------------------------------------------------------
 # Inspect eval logs, run output and the run index.
 logs/

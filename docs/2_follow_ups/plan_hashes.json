@@ -1,0 +1,12 @@
+{
+  "frozen_at": "2026-11-14T23:13:22+00:00",
+  "note": "Stage 2 freeze. experiments.py was reformatted after the E1-E5 freeze; prompts verified identical (see notes/prereg_stage2.md).",
+  "files": {
+    "outcome_bias/stage2.py": "d13237429ff221d8b97b2bc46f3b35df90f2659ca9b58819ec03e391daee7181",
+    "outcome_bias/exp_anchor.py": "7f9085ea0901b681e8f75f52278043114e88940cea03f1c8bdd60da4709a423d",
+    "outcome_bias/experiments.py": "152ba78f10442ed17ef60665be14909fb24ee5d0b212a0fdfbfb0bb1f49f0a78",
+    "outcome_bias/exp_e3.py": "3bc92504e2d2c9bfd04cddfc5166176a0dc87155ddb5bed6f517134b144ecad8",
+    "outcome_bias/exp_e5.py": "62abb7d9e43c56717a75cbddd9b1c1a127dfa543fed456c39e23f8abcad7e8db",
+    "outcome_bias/scenarios_v2.py": "abe7ebb02bb7b1be6fed522c526e23924f41fe823622bff65b7ad6eca5f462cc"
+  }
+}
