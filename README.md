@@ -6,6 +6,8 @@ Every experiment uses the same move: show the model a transcript that is word-fo
 
 **Start with the write-up:** [docs/posts/the_judge_who_read_the_ending.md](docs/posts/the_judge_who_read_the_ending.md).
 
+Code and writeup assisted by Claude; research questions, experiment design and interpretation of results are my own.
+
 ## Layout
 
 ```
